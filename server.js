@@ -3,6 +3,8 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const env = require('dotenv')
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 const app = express();
 app.use(cors());
 app.use(express.json())
