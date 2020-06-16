@@ -1,6 +1,8 @@
 const router = require('express').Router();
 let Product = require('../models/product.model')
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 router.route('/').get((req, res) => {
     Product.find()
         .then(products => res.json(products))
